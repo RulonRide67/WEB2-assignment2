@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name"
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loading" class="loading hidden">Loading...</div>
+        <div id="error" class="error hidden"></div>
+
+        <div id="weatherResult" class="result hidden">
+            <h2 id="cityName"></h2>
+            
+            <div class="section">
+                <h3>Weather Information</h3>
+                <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+                <p><strong>Description:</strong> <span id="description"></span></p>
+                <p><strong>Feels Like:</strong> <span id="feelsLike"></span></p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed"></span></p>
+                <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+                <p><strong>Pressure:</strong> <span id="pressure"></span></p>
+                <p><strong>Coordinates:</strong> <span id="coordinates"></span></p>
+                <p><strong>Country:</strong> <span id="country"></span></p>
+                <p><strong>Rain (3h):</strong> <span id="rain"></span></p>
+            </div>
+
+            <div id="currencySection" class="section hidden">
+                <h3>Currency Exchange Rates</h3>
+                <p id="currencyBase"></p>
+                
+                <div class="currency-table">
+                    <div class="currency-row">
+                        <div class="currency-item">
+                            <p><strong>1 <span id="currencyCode1"></span> = </strong><span id="rateUSD"></span> USD</p>
+                        </div>
+                        <div class="currency-item">
+                            <p><strong>1 USD = </strong><span id="rateToUSD"></span> <span id="currencyCode1b"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="currency-row">
+                        <div class="currency-item">
+                            <p><strong>1 <span id="currencyCode2"></span> = </strong><span id="rateEUR"></span> EUR</p>
+                        </div>
+                        <div class="currency-item">
+                            <p><strong>1 EUR = </strong><span id="rateToEUR"></span> <span id="currencyCode2b"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="currency-row">
+                        <div class="currency-item">
+                            <p><strong>1 <span id="currencyCode3"></span> = </strong><span id="rateKZT"></span> KZT</p>
+                        </div>
+                        <div class="currency-item">
+                            <p><strong>1 KZT = </strong><span id="rateToKZT"></span> <span id="currencyCode3b"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
